@@ -14,7 +14,7 @@
 ## Dependências:
 ```
 sudo apt update
-sudo apt install whois dig traceroute nslookup curl whatweb
+sudo apt install whois dig traceroute nslookup curl whatweb pipx
 pip install instaloader
 git clone https://github.com/sherlock-project/sherlock.git
 ```
