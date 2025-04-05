@@ -1,31 +1,21 @@
 #!/bin/bash
 
-# Verifica se uma URL foi passada como argumento
-if [ -z "$1" ]; then
-    echo "Uso: $0 <URL>"
-    exit 1
-fi
-
+read -p "Digite a URL (ex: https://exemplo.com): " url
 
 dir="links"
-
 
 if [ ! -d "$dir" ]; then
     echo "Criando diretório $dir..."
     mkdir "$dir"
 fi
 
-
-dominio=$(echo "$1" | sed 's|https\?://||; s|/.*||')
-
+dominio=$(echo "$url" | sed 's|https\?://||; s|/.*||')
 
 arquivo_links="$dir/links_${dominio}.txt"
 
 echo "Extraindo links HTTP/HTTPS de $dominio..."
 
-
-wget -q -O - "$1" | grep -oP '(?<=href=")https?://[^"]+' | grep "$dominio" | sort -u > "$arquivo_links"
-
+wget -q -O - "$url" | grep -oP '(?<=href=")https?://[^"]+' | grep "$dominio" | sort -u > "$arquivo_links"
 
 quantidade=$(wc -l < "$arquivo_links")
 

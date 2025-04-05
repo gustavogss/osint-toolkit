@@ -1,32 +1,23 @@
 #!/bin/bash
 
-
-if [ -z "$1" ]; then
-    echo "Uso: $0 <dominio>"
-    exit 1
-fi
-
+read -p "Digite o domínio (ex: exemplo.com): " dominio
 
 dir="ips"
-
 
 if [ ! -d "$dir" ]; then
     echo "Criando diretório $dir..."
     mkdir "$dir"
 fi
 
-echo "Criando lista de IPs do host $1..."
+echo "Criando lista de IPs do host $dominio..."
 
+arquivo="$dir/ips_$dominio.txt"
 
-arquivo="$dir/ips_$1.txt"
-
-
-for url in $(curl -s -k https://www.$1 | grep -Eo '(http|https)://[^"]+' | cut -d "/" -f 3 | grep "$1" | sort -u); do
+for url in $(curl -s -k https://www.$dominio | grep -Eo '(http|https)://[^"]+' | cut -d "/" -f 3 | grep "$dominio" | sort -u); do
     host $url | grep "has address" | cut -d " " -f 4
 done | sort -u > "$arquivo"
 
-
 quantidade_ips=$(wc -l < "$arquivo")
 
-echo "Foram encontrados $quantidade_ips IPs para o domínio $1."
+echo "Foram encontrados $quantidade_ips IPs para o domínio $dominio."
 echo "Lista salva em $arquivo"
