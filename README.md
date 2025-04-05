@@ -2,13 +2,12 @@
 
 ===== Menu OSINT =====
 1. Info de Domínio
-2. Buscar usuário em redes sociais (Sherlock)
-3. Info de IP
-4. Scan de site (whatweb)
-5. Ips do host
-6. Links do host
-7. Baixar perfil Instagram
-8. Sair
+2. Buscar usuário em redes sociais
+3. IPs do host, cria um arquivo e salva no diretório ips
+4. Links do host, cria um arquivo e salva no diretório links 
+5. Baixa perfil do Instagram
+6. Scan de site
+0. Sair
 =======================
 
 ## Dependências:
