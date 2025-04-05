@@ -16,6 +16,8 @@
 sudo apt update
 sudo apt install whois dig traceroute nslookup curl whatweb pipx
 pip install instaloader
+pipx ensurepath
+pipx install sherlock
 git clone https://github.com/sherlock-project/sherlock.git
 ```
 
