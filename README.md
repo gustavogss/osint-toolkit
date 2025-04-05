@@ -1,16 +1,16 @@
 # OSNIT TOOLKIT:
-
+```
 ===== Menu OSINT =====
 1. Info de Domínio
 2. Buscar usuário em redes sociais
 3. IPs do host, cria um arquivo e salva no diretório ips
 4. Links do host, cria um arquivo e salva no diretório links 
 5. Baixa perfil do Instagram
-6. Scan do site
+6. Scan do site   
 0. Sair
-   
-#### Pressione <ENTER> para voltar ao menu
+Pressione <ENTER> para voltar ao menu
 =======================
+```
 
 ## Dependências:
 ```
