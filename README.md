@@ -12,22 +12,19 @@
 =======================
 
 ## Dependências:
-
-'''
+```
 sudo apt update
 sudo apt install whois dig traceroute nslookup curl whatweb
 pip install instaloader
 git clone https://github.com/sherlock-project/sherlock.git
-'''
+```
 
 ### Requisitos:
-
-'''
+```
 chmod +x menu.sh dominio.sh instagram.sh ipinfo.sh ips.sh links.sh sherlock.sh whatweb.sh
-'''
+```
 
 ### Executar:
-
-'''
+```
 ./menu.sh 
-'''
+```
