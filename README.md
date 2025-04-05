@@ -8,6 +8,8 @@
 5. Baixa perfil do Instagram
 6. Scan de site
 0. Sair
+   
+Pressione <ENTER> para voltar ao menu
 =======================
 
 ## Dependências:
