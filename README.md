@@ -6,7 +6,7 @@
 3. IPs do host, cria um arquivo e salva no diretório ips
 4. Links do host, cria um arquivo e salva no diretório links 
 5. Baixa perfil do Instagram
-6. Scan de site
+6. Scan do site
 0. Sair
    
 #### Pressione <ENTER> para voltar ao menu
